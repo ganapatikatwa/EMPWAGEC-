@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace empwage
 {
-    public class EmpWageBuilderArray
+    public interface IComputeEmpWage
+    {
+        public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
+        public void computeEmpWage();
+
+    }
+    public class EmpWageBuilderArray : IComputeEmpWage
     {
         public const int IS_FULL_TIME = 2;
         public const int IS_PART_TIME = 1;
@@ -85,7 +91,9 @@ namespace empwage
             {
                 return "Total Emp Wage for Company : " + this.company + " is " + this.totalEmpWage;
             }
+
         }
 
     }
+
 }
