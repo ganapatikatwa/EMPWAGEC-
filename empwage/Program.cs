@@ -4,19 +4,16 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Problem Part 3");
+            Console.WriteLine("Welcome to Employee Wage Computation Problem Part 4");
 
-            Console.WriteLine("Output of Total Employee wage and Save Total Wage of company as :");
+            Console.WriteLine("Output of Employee wage for Multiple Company Using Interface Approach :");
             //Creating Object of the class to call in Main method
             //because method is non static
 
-            EmpWageBuilder dmart = new EmpWageBuilder("Dmart", 20, 2, 10);
-            EmpWageBuilder reliance = new EmpWageBuilder("Reliance", 10, 4, 20);
-            dmart.computeEmpWage();
-            Console.WriteLine(dmart.toString());
-
-            reliance.computeEmpWage();
-            Console.WriteLine(reliance.toString());
+            EmpWageBuilderArray builder = new EmpWageBuilderArray();
+            builder.addCompanyEmpWage("Dmart", 20, 2, 10);
+            builder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            builder.computeEmpWage();
 
 
         }
