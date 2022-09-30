@@ -95,7 +95,13 @@ namespace empwage
             }
 
         }
+        public interface IEmployeeWage
+        {
+            public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
+            public int computeEmpWage(CompanyEmpWage companyEmpWage);
+            public void computeEmpWage();
 
+        }
     }
 
 }
