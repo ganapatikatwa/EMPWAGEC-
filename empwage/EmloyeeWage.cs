@@ -95,6 +95,7 @@ namespace empwage
             }
 
         }
+        //call all methods using interface
         public interface IEmployeeWage
         {
             public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth);
